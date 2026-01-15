@@ -97,11 +97,7 @@ The following Claude models are configured in [config/config.yaml](config/config
 
 Create or edit your Claude Code `settings.json`:
 
-**Linux/WSL:** `~/.config/claude-code/settings.json`
-
-**macOS:** `~/Library/Application Support/claude-code/settings.json`
-
-**Windows:** `%APPDATA%\claude-code\settings.json`
+**Linux/macOS/WSL:** `~/.claude/settings.json`
 
 ```json
 {
