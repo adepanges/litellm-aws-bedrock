@@ -129,13 +129,7 @@ Create or edit your Claude Code `settings.json`:
 
 ### Switching Profiles (Optional)
 
-If you need to switch between different settings (e.g., work vs personal), you can use a tool like `cctx` or create multiple settings files:
-
-```bash
-# Example with symlinks
-ln -s ~/.config/claude-code/settings-work.json ~/.config/claude-code/settings.json
-ln -s ~/.config/claude-code/settings-personal.json ~/.config/claude-code/settings.json
-```
+If you need to switch between different settings (e.g., work vs personal), you can use a tool like `cctx` or create multiple settings files.
 
 ## API Usage
 
