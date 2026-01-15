@@ -1,0 +1,55 @@
+model_list:
+  # AWS Bedrock - Latest Claude models
+  - model_name: aws-bedrock:claude-opus-4-5
+    litellm_params:
+      model: bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0
+      aws_region_name: os.environ/AWS_REGION_NAME
+      api_base: https://bedrock-runtime.us-east-1.amazonaws.com
+      # cache_prompt: True
+    model_info:
+      access_groups: ["aws-bedrock"]
+
+  - model_name: aws-bedrock:claude-sonnet-4-5
+    litellm_params:
+      model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+      aws_region_name: os.environ/AWS_REGION_NAME
+      api_base: https://bedrock-runtime.us-east-1.amazonaws.com
+      # cache_prompt: True
+    model_info:
+      access_groups: ["aws-bedrock"]
+  
+  - model_name: aws-bedrock:claude-haiku-4-5
+    litellm_params:
+      model: bedrock/us.anthropic.claude-haiku-4-5-20251001-v1:0
+      aws_region_name: os.environ/AWS_REGION_NAME
+      api_base: https://bedrock-runtime.us-east-1.amazonaws.com
+      # cache_prompt: True
+    model_info:
+      access_groups: ["aws-bedrock"]
+
+# General settings
+general_settings:
+  master_key: os.environ/MASTER_KEY  # Set in .env or environment
+  database_url: os.environ/DATABASE_URL  # Optional: for tracking
+  store_model_in_db: true
+  store_prompts_in_spend_logs: true
+  cache: true
+  cache_type: "redis"
+  cache_redis_host: os.environ/REDIS_HOST
+  cache_redis_port: os.environ/REDIS_PORT
+  cache_redis_db: 0
+  # Log retention settings - keep logs for 1 year, cleanup daily
+  maximum_spend_logs_retention_period: "365d"
+  maximum_spend_logs_retention_interval: "1d"
+  
+# OpenAI-compatible endpoint settings
+litellm_settings:
+  drop_params: True  # Drop unsupported params
+  set_verbose: true  # Enable detailed logging
+  fallback: []  # Add fallback models if needed
+
+# Environment variables to use from .aws profile
+environment_variables:
+  AWS_PROFILE: os.environ/AWS_PROFILE  # Will use default if not set
+  AWS_DEFAULT_REGION: os.environ/AWS_DEFAULT_REGION  # AWS region for Bedrock
+  AWS_REGION_NAME: os.environ/AWS_REGION_NAME  # AWS region for Bedrock

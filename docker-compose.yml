@@ -1,0 +1,44 @@
+services:
+  litellm:
+    build: .
+    container_name: litellm
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./config:/app/config
+      - ${HOME}/.aws:/root/.aws:ro
+    env_file:
+      - ./config/.env
+    environment:
+      - LITELLM_CONFIG_FILE=/app/config/config.yaml
+      - DATABASE_URL=postgresql://litellm_user:litellm_pass@postgres:5432/litellm_db
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - postgres
+      - redis
+    command: ["--config", "/app/config/config.yaml", "--port", "4000", "--detailed_debug"]
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: litellm_redis
+    volumes:
+      - litellm_redis_data:/data
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: litellm_postgres
+    environment:
+      - POSTGRES_USER=litellm_user
+      - POSTGRES_PASSWORD=litellm_pass
+      - POSTGRES_DB=litellm_db
+    volumes:
+      - litellm_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  litellm_postgres_data:
+  litellm_redis_data:
