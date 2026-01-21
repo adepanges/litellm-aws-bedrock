@@ -28,152 +28,115 @@ model_list:
       access_groups: ["aws-bedrock"]
 
   # GitHub Copilot - OpenAI Models
-  - model_name: github:gpt-4.1
+  - model_name: github-copilot:gpt-4.1
     litellm_params:
-      model: github/gpt-4.1
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-4.1
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5
+  - model_name: github-copilot:gpt-5-mini
     litellm_params:
-      model: github/gpt-5
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5-mini
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5-mini
+  - model_name: github-copilot:gpt-5.1
     litellm_params:
-      model: github/gpt-5-mini
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5.1
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5-codex
+  - model_name: github-copilot:gpt-5.1-codex
     litellm_params:
-      model: github/gpt-5-codex
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      mode: responses
-      access_groups: ["github-copilot"]
-
-  - model_name: github:gpt-5.1
-    litellm_params:
-      model: github/gpt-5.1
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      access_groups: ["github-copilot"]
-
-  - model_name: github:gpt-5.1-codex
-    litellm_params:
-      model: github/gpt-5.1-codex
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5.1-codex
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       mode: responses
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5.1-codex-mini
+  - model_name: github-copilot:gpt-5.1-codex-mini
     litellm_params:
-      model: github/gpt-5.1-codex-mini
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5.1-codex-mini
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github-copilot:gpt-5.1-codex-max
+    litellm_params:
+      model: github_copilot/gpt-5.1-codex-max
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       mode: responses
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5.1-codex-max
+  - model_name: github-copilot:gpt-5.2
     litellm_params:
-      model: github/gpt-5.1-codex-max
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      mode: responses
-      access_groups: ["github-copilot"]
-
-  - model_name: github:gpt-5.2
-    litellm_params:
-      model: github/gpt-5.2
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5.2
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:gpt-5.2-codex
+  - model_name: github-copilot:gpt-5.2-codex
     litellm_params:
-      model: github/gpt-5.2-codex
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gpt-5.2-codex
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       mode: responses
       access_groups: ["github-copilot"]
 
   # GitHub Copilot - Anthropic Models
-  - model_name: github:claude-haiku-4-5
+  - model_name: github-copilot:claude-haiku-4-5
     litellm_params:
-      model: github/claude-haiku-4-5
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/claude-haiku-4.5
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
+    model_info:
+      access_groups: ["github-copilot"]
+    
+  - model_name: github-copilot:claude-opus-4-5
+    litellm_params:
+      model: github_copilot/claude-opus-4.5
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:claude-opus-4-1
+  - model_name: github-copilot:claude-sonnet-4-5
     litellm_params:
-      model: github/claude-opus-4-1
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/claude-sonnet-4.5
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
-
-  - model_name: github:claude-opus-4-5
-    litellm_params:
-      model: github/claude-opus-4-5
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      access_groups: ["github-copilot"]
-
-  - model_name: github:claude-sonnet-4
-    litellm_params:
-      model: github/claude-sonnet-4
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      access_groups: ["github-copilot"]
-
-  - model_name: github:claude-sonnet-4-5
-    litellm_params:
-      model: github/claude-sonnet-4-5
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      access_groups: ["github-copilot"]
-
+  
   # GitHub Copilot - Google Models
-  - model_name: github:gemini-2.5-pro
+  - model_name: github-copilot:gemini-3-flash
     litellm_params:
-      model: github/gemini-2.5-pro
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gemini-3-flash
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
-  - model_name: github:gemini-3-flash
+  - model_name: github-copilot:gemini-3-pro
     litellm_params:
-      model: github/gemini-3-flash
-      api_key: os.environ/GITHUB_API_KEY
-    model_info:
-      access_groups: ["github-copilot"]
-
-  - model_name: github:gemini-3-pro
-    litellm_params:
-      model: github/gemini-3-pro
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/gemini-3-pro
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
   # GitHub Copilot - xAI Models
-  - model_name: github:grok-code-fast-1
+  - model_name: github-copilot:grok-code-fast-1
     litellm_params:
-      model: github/grok-code-fast-1
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/grok-code-fast-1
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
   # GitHub Copilot - Fine-tuned Models
-  - model_name: github:raptor-mini
+  - model_name: github-copilot:raptor-mini
     litellm_params:
-      model: github/raptor-mini
-      api_key: os.environ/GITHUB_API_KEY
+      model: github_copilot/raptor-mini
+      extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
 
@@ -203,3 +166,4 @@ environment_variables:
   AWS_PROFILE: os.environ/AWS_PROFILE  # Will use default if not set
   AWS_DEFAULT_REGION: os.environ/AWS_DEFAULT_REGION  # AWS region for Bedrock
   AWS_REGION_NAME: os.environ/AWS_REGION_NAME  # AWS region for Bedrock
+  GITHUB_COPILOT_TOKEN_DIR: os.environ/GITHUB_COPILOT_TOKEN_DIR  # Directory for GitHub Copilot tokens
