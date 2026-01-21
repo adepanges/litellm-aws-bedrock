@@ -191,6 +191,11 @@ docker-compose down -v
 docker-compose up -d
 ```
 
+### Stop and Start
+```
+docker-compose down && docker-compose up -d
+```
+
 **Warning:** This will delete all usage logs and cached data.
 
 ## Troubleshooting

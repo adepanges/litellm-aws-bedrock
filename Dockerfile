@@ -1,4 +1,4 @@
-FROM docker.litellm.ai/berriai/litellm:v1.80.15.rc.1
+FROM ghcr.io/berriai/litellm:main-v1.81.0-nightly
 
 # Install boto3 for AWS Bedrock support
 RUN pip install boto3>=1.28.57

@@ -27,6 +27,156 @@ model_list:
     model_info:
       access_groups: ["aws-bedrock"]
 
+  # GitHub Copilot - OpenAI Models
+  - model_name: github:gpt-4.1
+    litellm_params:
+      model: github/gpt-4.1
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5
+    litellm_params:
+      model: github/gpt-5
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5-mini
+    litellm_params:
+      model: github/gpt-5-mini
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5-codex
+    litellm_params:
+      model: github/gpt-5-codex
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      mode: responses
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.1
+    litellm_params:
+      model: github/gpt-5.1
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.1-codex
+    litellm_params:
+      model: github/gpt-5.1-codex
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      mode: responses
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.1-codex-mini
+    litellm_params:
+      model: github/gpt-5.1-codex-mini
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      mode: responses
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.1-codex-max
+    litellm_params:
+      model: github/gpt-5.1-codex-max
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      mode: responses
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.2
+    litellm_params:
+      model: github/gpt-5.2
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gpt-5.2-codex
+    litellm_params:
+      model: github/gpt-5.2-codex
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      mode: responses
+      access_groups: ["github-copilot"]
+
+  # GitHub Copilot - Anthropic Models
+  - model_name: github:claude-haiku-4-5
+    litellm_params:
+      model: github/claude-haiku-4-5
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:claude-opus-4-1
+    litellm_params:
+      model: github/claude-opus-4-1
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:claude-opus-4-5
+    litellm_params:
+      model: github/claude-opus-4-5
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:claude-sonnet-4
+    litellm_params:
+      model: github/claude-sonnet-4
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:claude-sonnet-4-5
+    litellm_params:
+      model: github/claude-sonnet-4-5
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  # GitHub Copilot - Google Models
+  - model_name: github:gemini-2.5-pro
+    litellm_params:
+      model: github/gemini-2.5-pro
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gemini-3-flash
+    litellm_params:
+      model: github/gemini-3-flash
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  - model_name: github:gemini-3-pro
+    litellm_params:
+      model: github/gemini-3-pro
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  # GitHub Copilot - xAI Models
+  - model_name: github:grok-code-fast-1
+    litellm_params:
+      model: github/grok-code-fast-1
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
+  # GitHub Copilot - Fine-tuned Models
+  - model_name: github:raptor-mini
+    litellm_params:
+      model: github/raptor-mini
+      api_key: os.environ/GITHUB_API_KEY
+    model_info:
+      access_groups: ["github-copilot"]
+
 # General settings
 general_settings:
   master_key: os.environ/MASTER_KEY  # Set in .env or environment
