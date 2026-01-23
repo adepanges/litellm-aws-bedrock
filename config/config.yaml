@@ -34,7 +34,7 @@ model_list:
       extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
-      base_model: "claude-haiku-4-5-20251001"
+      base_model: "anthropic.claude-haiku-4-5-20251001-v1:0"
 
   - model_name: github-copilot:claude-sonnet-4-5
     litellm_params:
@@ -42,7 +42,7 @@ model_list:
       extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
-      base_model: "claude-sonnet-4-5-20250929"
+      base_model: "anthropic.claude-sonnet-4-5-20250929-v1:0"
     
   - model_name: github-copilot:claude-opus-4-5
     litellm_params:
@@ -50,7 +50,7 @@ model_list:
       extra_headers: {"editor-version": "vscode/1.108.1","editor-plugin-version": "copilot/1.388.0","Copilot-Integration-Id": "vscode-chat","user-agent": "GithubCopilot/1.388.0"}
     model_info:
       access_groups: ["github-copilot"]
-      base_model: "claude-opus-4-5-20251101"
+      base_model: "anthropic.claude-opus-4-5-20251101-v1:0"
 
   - model_name: za-i:glm-4.7
     litellm_params:
