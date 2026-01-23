@@ -78,24 +78,24 @@ model_list:
       base_model: "anthropic.claude-opus-4-5-20251101-v1:0"
       <<: *opus_pricing
 
-  - model_name: za-i:glm-4.7
+  - model_name: z-ai:glm-4-7
     litellm_params:
       model: anthropic/glm-4.7
       api_base: os.environ/ZAI_API_BASE
       api_key: os.environ/ZAI_API_KEY
     model_info:
-      access_groups: ["za-i"]
+      access_groups: ["z-ai"]
       base_model: "zai/glm-4.7"
       input_cost_per_token: 0.0000006
       output_cost_per_token: 0.0000022
 
-  - model_name: za-i:glm-4.7-flashx
+  - model_name: z-ai:glm-4-7-flashx
     litellm_params:
       model: anthropic/glm-4.7-flashx
       api_base: os.environ/ZAI_API_BASE
       api_key: os.environ/ZAI_API_KEY
     model_info:
-      access_groups: ["za-i"]
+      access_groups: ["z-ai"]
       base_model: "zai/glm-4.7-flashx"
       input_cost_per_token: 0.00000007
       output_cost_per_token: 0.0000004
@@ -126,8 +126,8 @@ general_settings:
   
 # OpenAI-compatible endpoint settings
 litellm_settings:
+  check_provider_endpoint: true
   drop_params: True  # Drop unsupported params
-  set_verbose: true  # Enable detailed logging
   fallback: []  # Add fallback models if needed
 
 # Environment variables to use from .aws profile
