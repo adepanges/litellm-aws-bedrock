@@ -235,3 +235,11 @@ This project uses LiteLLM under its respective license. See [LiteLLM documentati
 - [LiteLLM Documentation](https://docs.litellm.ai/)
 - [AWS Bedrock Documentation](https://docs.aws.amazon.com/bedrock/)
 - [Claude Code Documentation](https://github.com/anthropics/claude-code)
+
+
+## Provider Budget
+```
+curl -X GET http://localhost:4000/provider/budgets \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-1234567890abcdef1234567890abcdef"
+```

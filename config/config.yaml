@@ -100,6 +100,15 @@ model_list:
       input_cost_per_token: 0.00000007
       output_cost_per_token: 0.0000004
 
+router_settings:
+  provider_budget_config: 
+    bedrock: 
+      budget_limit: 10
+      time_period: 1d
+    github_copilot: 
+      budget_limit: 3
+      time_period: 1d
+
 # General settings
 general_settings:
   master_key: os.environ/MASTER_KEY  # Set in .env or environment
