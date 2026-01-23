@@ -52,6 +52,26 @@ model_list:
       access_groups: ["github-copilot"]
       base_model: "claude-opus-4-5-20251101"
 
+  - model_name: za-i:glm-4.7
+    litellm_params:
+      model: anthropic/glm-4.7
+      api_base: https://api.z.ai/api/anthropic
+      api_key: os.environ/ZAI_API_KEY
+    model_info:
+      access_groups: ["za-i"]
+      base_model: "zai/glm-4.7"
+
+  - model_name: za-i:glm-4.7-flashx
+    litellm_params:
+      model: anthropic/glm-4.7-flashx
+      api_base: https://api.z.ai/api/anthropic
+      api_key: os.environ/ZAI_API_KEY
+    model_info:
+      access_groups: ["za-i"]
+      base_model: "zai/glm-4.7-flashx"
+      input_cost_per_token: 0.00000007
+      output_cost_per_token: 0.0000004
+
 # General settings
 general_settings:
   master_key: os.environ/MASTER_KEY  # Set in .env or environment
