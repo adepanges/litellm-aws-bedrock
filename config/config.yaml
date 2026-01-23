@@ -35,6 +35,8 @@ model_list:
     model_info:
       access_groups: ["github-copilot"]
       base_model: "anthropic.claude-haiku-4-5-20251001-v1:0"
+      input_cost_per_token: 0.000001
+      output_cost_per_token: 0.000005
 
   - model_name: github-copilot:claude-sonnet-4-5
     litellm_params:
@@ -43,6 +45,8 @@ model_list:
     model_info:
       access_groups: ["github-copilot"]
       base_model: "anthropic.claude-sonnet-4-5-20250929-v1:0"
+      input_cost_per_token: 0.000003
+      output_cost_per_token: 0.000015
     
   - model_name: github-copilot:claude-opus-4-5
     litellm_params:
@@ -51,20 +55,24 @@ model_list:
     model_info:
       access_groups: ["github-copilot"]
       base_model: "anthropic.claude-opus-4-5-20251101-v1:0"
+      input_cost_per_token: 0.000005
+      output_cost_per_token: 0.000025
 
   - model_name: za-i:glm-4.7
     litellm_params:
       model: anthropic/glm-4.7
-      api_base: https://api.z.ai/api/anthropic
+      api_base: os.environ/ZAI_API_BASE
       api_key: os.environ/ZAI_API_KEY
     model_info:
       access_groups: ["za-i"]
       base_model: "zai/glm-4.7"
+      input_cost_per_token: 0.0000006
+      output_cost_per_token: 0.0000022
 
   - model_name: za-i:glm-4.7-flashx
     litellm_params:
       model: anthropic/glm-4.7-flashx
-      api_base: https://api.z.ai/api/anthropic
+      api_base: os.environ/ZAI_API_BASE
       api_key: os.environ/ZAI_API_KEY
     model_info:
       access_groups: ["za-i"]
