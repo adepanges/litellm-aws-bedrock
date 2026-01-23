@@ -1,1 +1,4 @@
-config/litellm
+config/litellm/github_copilot
+copilot/secrets/**/*
+
+!placeholder.txt

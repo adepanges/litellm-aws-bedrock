@@ -6,9 +6,10 @@ services:
       - "4000:4000"
     volumes:
       - ./config:/app/config
+      - ./copilot:/app/copilot
       - ${HOME}/.aws:/root/.aws:ro
     env_file:
-      - ./config/.env
+      - .env
     environment:
       - LITELLM_CONFIG_FILE=/app/config/config.yaml
       - DATABASE_URL=postgresql://litellm_user:litellm_pass@postgres:5432/litellm_db
