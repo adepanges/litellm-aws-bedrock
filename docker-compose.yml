@@ -17,7 +17,7 @@ services:
     depends_on:
       - postgres
       - redis
-    command: ["--config", "/app/config/config.yaml", "--port", "4000", "--detailed_debug"]
+    command: ["--config", "/app/config/config.yaml", "--port", "4000"]
     restart: unless-stopped
 
   redis:
