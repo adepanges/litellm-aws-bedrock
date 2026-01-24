@@ -25,7 +25,6 @@ model_list:
       model: bedrock/us.anthropic.claude-haiku-4-5-20251001-v1:0
       aws_region_name: os.environ/AWS_REGION_NAME
       api_base: https://bedrock-runtime.us-east-1.amazonaws.com
-      # cache_prompt: True
     model_info:
       access_groups: ["aws-bedrock"]
       <<: *haiku_pricing
@@ -35,7 +34,6 @@ model_list:
       model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
       aws_region_name: os.environ/AWS_REGION_NAME
       api_base: https://bedrock-runtime.us-east-1.amazonaws.com
-      # cache_prompt: True
     model_info:
       access_groups: ["aws-bedrock"]
       <<: *sonnet_pricing
@@ -45,9 +43,30 @@ model_list:
       model: bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0
       aws_region_name: os.environ/AWS_REGION_NAME
       api_base: https://bedrock-runtime.us-east-1.amazonaws.com
-      # cache_prompt: True
     model_info:
       access_groups: ["aws-bedrock"]
+      <<: *opus_pricing
+
+  # Anthropic - Latest Claude models
+  - model_name: haiku
+    litellm_params:
+      model: anthropic/claude-haiku-4-5-20251001
+    model_info:
+      access_groups: ["anthropic"]
+      <<: *haiku_pricing
+
+  - model_name: sonnet
+    litellm_params:
+      model: anthropic/claude-sonnet-4-5-20250929
+    model_info:
+      access_groups: ["anthropic"]
+      <<: *sonnet_pricing
+  
+  - model_name: opus
+    litellm_params:
+      model: anthropic/claude-opus-4-5-20251101
+    model_info:
+      access_groups: ["anthropic"]
       <<: *opus_pricing
 
   # GitHub Copilot - Anthropic Models
@@ -123,12 +142,17 @@ general_settings:
   # Log retention settings - keep logs for 1 year, cleanup daily
   maximum_spend_logs_retention_period: "365d"
   maximum_spend_logs_retention_interval: "1d"
+  forward_client_headers_to_llm_api: true
   
 # OpenAI-compatible endpoint settings
 litellm_settings:
   check_provider_endpoint: true
   drop_params: True  # Drop unsupported params
   fallback: []  # Add fallback models if needed
+  model_group_settings:
+    forward_client_headers_to_llm_api:
+      - anthropic/*
+      - anthropic:*
 
 # Environment variables to use from .aws profile
 environment_variables:
