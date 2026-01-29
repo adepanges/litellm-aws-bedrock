@@ -34,7 +34,7 @@ project/
 To create and authenticate a new profile:
 
 ```bash
-./copilot/authorize-profile.sh profile-name
+./copilot/authorize-profile.sh work-copilot
 ```
 
 You'll see:
@@ -50,7 +50,7 @@ Visit the URL, enter the code, and authorize. Credentials will be saved in the p
 Use the provided script to switch between profiles:
 
 ```bash
-./copilot/switch-profile.sh profile-name
+./copilot/switch-profile.sh work-copilot
 ```
 
 The script will:

@@ -124,9 +124,9 @@ router_settings:
     bedrock: 
       budget_limit: 10
       time_period: 1d
-    github_copilot: 
-      budget_limit: 3
-      time_period: 1d
+    # github_copilot: 
+    #   budget_limit: 3
+    #   time_period: 1d
 
 # General settings
 general_settings:
